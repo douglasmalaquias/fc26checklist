@@ -6,128 +6,119 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-  <div class="manager-bar">
-  <div class="manager-left">
-    <label>
-      Carreira:
-      <select id="career-select">
-        <option value="1">Carreira 1</option>
-        <option value="2">Carreira 2</option>
-        <option value="3">Carreira 3</option>
-      </select>
-    </label>
-  </div>
+   <div class="app">
+    <h1>Checklist Carreira Borussia Mönchengladbach FC 26</h1>
+    <p class="subtitle">Selecione a carreira, dê um nome ao projeto e use o checklist como manager.</p>
 
-  <div class="toolbar">
-  <div class="toolbar-left">
-    <button id="btn-clear">Limpar checklist desta carreira</button>
-  </div>
-  <div class="toolbar-right">
-    <div id="progress-text"></div>
-    <div class="progress-bar">
-      <div class="progress-bar-inner" id="global-progress-inner"></div>
+    <!-- barra do manager -->
+    <div class="manager-bar">
+      <div class="manager-left">
+        <label>
+          Carreira:
+          <select id="career-select">
+            <option value="1">Carreira 1</option>
+            <option value="2">Carreira 2</option>
+          </select>
+        </label>
+      </div>
+      <div class="manager-right">
+        <label>
+          Nome fantasia do time:
+          <input id="team-alias" type="text" placeholder="Ex: Borussia Project X">
+        </label>
+      </div>
     </div>
-  </div>
-</div>
 
+    <!-- toolbar -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <button id="btn-clear">Limpar checklist desta carreira</button>
+      </div>
+      <div class="toolbar-right">
+        <div id="progress-text"></div>
+        <div class="progress-bar">
+          <div class="progress-bar-inner" id="global-progress-inner"></div>
+        </div>
+      </div>
+    </div>
 
-    <!-- Exemplo de bloco: Semana 1 -->
+    <!-- Semana 1 (como você já tinha) -->
     <section class="section">
-      <h2>Semana 1 – Início (Dias 1–7)</h2>
+      <h2>Semana 1 – Início (dias 1–7)</h2>
 
-      <div class="task" data-id="carregar-save">
+      <div class="task" data-id="sem1_carregar_save">
         <label>
           <input type="checkbox" class="task-checkbox">
-          DIA 1: Carregar BMG + criar Backup1
-        </label>
-        <textarea class="task-notes" placeholder="Comentários (ex: orçamento confirmado, sliders usados)..."></textarea>
-      </div>
-
-      <div class="task" data-id="vender-weigl">
-        <label>
-          <input type="checkbox" class="task-checkbox">
-          DIA 1: Vender Weigl (meta ≥ €12M)
-        </label>
-        <textarea class="task-notes" placeholder="Clube comprador, valor, cláusulas..."></textarea>
-      </div>
-
-      <div class="task" data-id="vender-hofmann">
-        <label>
-          <input type="checkbox" class="task-checkbox">
-          DIA 1: Vender Hofmann (meta ≥ €8M)
+          Dia 1: Carregar BMG e criar save “Backup1”
         </label>
         <textarea class="task-notes"></textarea>
       </div>
 
-      <div class="task" data-id="vender-kramer">
+      <div class="task" data-id="sem1_vender_weigl">
         <label>
           <input type="checkbox" class="task-checkbox">
-          DIA 1: Vender Kramer (meta ≥ €6M)
+          Dia 1: Colocar Weigl à venda (meta ≥ €12M)
         </label>
         <textarea class="task-notes"></textarea>
       </div>
 
-      <div class="task" data-id="importar-tatica">
+      <!-- continue aqui com as demais tarefas da semana 1 que você já tinha,
+           só garantindo que cada data-id seja único -->
+    </section>
+
+    <!-- MÊS 1 -->
+    <section class="section">
+      <h2>Mês 1 – Setembro</h2>
+
+      <div class="task" data-id="mes1_rodada1">
         <label>
           <input type="checkbox" class="task-checkbox">
-          DIA 2: Importar tática 4‑2‑3‑1 (código AZYqfmYWKMFC)
+          Jogar Rodada 1 da Bundesliga (objetivo: observar defesa)
+        </label>
+        <textarea class="task-notes" placeholder="Resultado, destaques, problemas..."></textarea>
+      </div>
+
+      <div class="task" data-id="mes1_rodada2">
+        <label>
+          <input type="checkbox" class="task-checkbox">
+          Jogar Rodada 2 da Bundesliga
         </label>
         <textarea class="task-notes"></textarea>
       </div>
 
-      <div class="task" data-id="contratar-abner">
+      <div class="task" data-id="mes1_resumo">
         <label>
           <input type="checkbox" class="task-checkbox">
-          DIA 2: Contratar LE experiente (ex: Abner)
+          Fechar Setembro: revisar posição (meta 8º–12º) e gols pró/contra
         </label>
-        <textarea class="task-notes" placeholder="Nome, OVR/POT, valor pago..."></textarea>
+        <textarea class="task-notes"></textarea>
       </div>
+    </section>
 
-      <div class="task" data-id="contratar-savinho">
+    <!-- MÊS 2 -->
+    <section class="section">
+      <h2>Mês 2 – Outubro</h2>
+
+      <div class="task" data-id="mes2_rodada3">
         <label>
           <input type="checkbox" class="task-checkbox">
-          DIA 3: Contratar RW (ex: Savinho)
+          Jogar rodadas 3–5 mantendo 4‑2‑3‑1
         </label>
         <textarea class="task-notes"></textarea>
       </div>
 
-      <div class="task" data-id="contratar-ndidi">
+      <div class="task" data-id="mes2_copa">
         <label>
           <input type="checkbox" class="task-checkbox">
-          DIA 4: Contratar volante defensivo (ex: Ndidi)
+          Disputar 1ª fase da Copa da Alemanha
         </label>
         <textarea class="task-notes"></textarea>
       </div>
 
-      <div class="task" data-id="contratar-estevao">
+      <div class="task" data-id="mes2_resumo">
         <label>
           <input type="checkbox" class="task-checkbox">
-          DIA 5: Contratar ST promissor (ex: Estevão)
-        </label>
-        <textarea class="task-notes"></textarea>
-      </div>
-
-      <div class="task" data-id="contratar-echeverri">
-        <label>
-          <input type="checkbox" class="task-checkbox">
-          DIA 5: Contratar CAM promissor (ex: Echeverri)
-        </label>
-        <textarea class="task-notes"></textarea>
-      </div>
-
-      <div class="task" data-id="amistoso-1">
-        <label>
-          <input type="checkbox" class="task-checkbox">
-          DIA 6: Jogar 1º amistoso testando a 4‑2‑3‑1
-        </label>
-        <textarea class="task-notes" placeholder="Resultado, impressões da tática..."></textarea>
-      </div>
-
-      <div class="task" data-id="salvar-dia7">
-        <label>
-          <input type="checkbox" class="task-checkbox">
-          DIA 7: Salvar jogo como “BMG_S1_Dia7”
+          Fechar Outubro: meta 6º–10º na tabela, ajustar tática se necessário
         </label>
         <textarea class="task-notes"></textarea>
       </div>
